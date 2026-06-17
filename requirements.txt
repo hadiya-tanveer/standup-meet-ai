@@ -1,0 +1,43 @@
+# Jira Integration
+jira>=3.10.5
+
+# Slack Integration
+slack-sdk>=3.19.0
+
+# Google APIs
+google-api-python-client>=2.100.0
+google-auth-httplib2>=0.2.0
+google-auth-oauthlib>=1.2.0
+
+# AI/Automation Framework
+crewai>=0.25.0
+
+# String Matching
+rapidfuzz>=3.6.0
+
+# Environment Configuration
+python-dotenv>=1.0.0
+
+# Browser Automation
+selenium>=4.15.0
+undetected-chromedriver>=3.5.4
+
+# Web Framework
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic==2.12.5
+pyngrok>=7.0.0
+requests>=2.31.0
+
+# Audio Processing & Text-to-Speech
+pyttsx3>=2.90
+pydub>=0.25.1
+pyaudio>=0.2.13
+
+# Markdown Utilities
+mdutils>=1.6.0
+
+liteLLM>=0.1.0
+
+# Dependencies for audio libraries (system-level)
+# Note: pyaudio requires portaudio-dev on Linux, XCode on macOS

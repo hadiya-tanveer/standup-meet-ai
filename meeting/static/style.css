@@ -1,0 +1,86 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #0f0f1a;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Status text styling */
+#status-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+#bars {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Basic bar design */
+.bar {
+    background: linear-gradient(180deg, #ff007c, #ff9f00, #00eaff);
+    background-size: 200% 200%;
+    height: 3px;
+    width: 10px;
+    margin: 0px 4px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Speaking animation */
+.speaking .bar {
+    animation: sound linear infinite alternate, gradientShift 2s ease infinite;
+    box-shadow: 0 0 10px rgba(255, 0, 124, 0.6);
+}
+
+@keyframes sound {
+    0% {
+        opacity: .35;
+        height: 3px;
+    }
+    100% {
+        opacity: 1;
+        height: 70px;
+    }
+}
+
+/* Gradient background animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Idle bars (flat, dim) */
+.idle .bar {
+    height: 3px;
+    opacity: 0.3;
+    animation: none;
+    box-shadow: none;
+}
+
+/* Different animation speeds per bar for speaking effect */
+.bar:nth-child(1)  { animation-duration: 474ms, 2s; }
+.bar:nth-child(2)  { animation-duration: 433ms, 2s; }
+.bar:nth-child(3)  { animation-duration: 407ms, 2s; }
+.bar:nth-child(4)  { animation-duration: 458ms, 2s; }
+.bar:nth-child(5)  { animation-duration: 400ms, 2s; }
+.bar:nth-child(6)  { animation-duration: 427ms, 2s; }
+.bar:nth-child(7)  { animation-duration: 441ms, 2s; }
+.bar:nth-child(8)  { animation-duration: 419ms, 2s; }
+.bar:nth-child(9)  { animation-duration: 487ms, 2s; }
+.bar:nth-child(10) { animation-duration: 442ms, 2s; }
+
+/* Status text glow when speaking */
+.speaking ~ #status-text {
+    color: #00eaff;
+    text-shadow: 0 0 8px #00eaff;
+}
