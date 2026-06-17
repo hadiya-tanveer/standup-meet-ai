@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Virtual environments
+standup-meet-env/
+
+# Environment variables
+.env
+
+# Credentials
+config/
+
+# Test files
+test/  
